@@ -1,0 +1,42 @@
+{
+  "name": "reachinbox-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReachInbox email scheduler API and worker",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "dev:worker": "tsx watch src/worker.ts",
+    "build": "tsc -p tsconfig.json",
+    "test": "node --env-file=.env.example --import tsx --test src/modules/**/*.test.ts",
+    "start": "node dist/server.js",
+    "start:worker": "node dist/worker.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@bull-board/api": "^9.11.0",
+    "@bull-board/express": "^9.11.0",
+    "@elastic/elasticsearch": "^8.17.0",
+    "@prisma/client": "6.12.0",
+    "bullmq": "^5.34.0",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.2",
+    "google-auth-library": "^10.5.0",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.2",
+    "nodemailer": "^10.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^22.10.5",
+    "prisma": "6.12.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

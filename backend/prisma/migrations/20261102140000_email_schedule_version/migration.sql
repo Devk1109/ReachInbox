@@ -1,0 +1,2 @@
+ALTER TABLE "emails"
+ADD COLUMN "schedule_version" INTEGER NOT NULL DEFAULT 0;

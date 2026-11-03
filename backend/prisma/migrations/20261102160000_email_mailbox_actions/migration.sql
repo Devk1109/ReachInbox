@@ -1,0 +1,4 @@
+ALTER TABLE "emails"
+ADD COLUMN "is_starred" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN "archived_at" TIMESTAMP(3),
+ADD COLUMN "trashed_at" TIMESTAMP(3);
