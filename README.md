@@ -10,6 +10,7 @@ ReachInbox is a full stack email scheduling app. The API, worker and PostgreSQL,
 4. From the project root, run `./start.ps1`. It starts PostgreSQL, Redis, and Elasticsearch, prepares the database, launches the API, worker, and frontend, and opens `http://localhost:5173`. The three app logs appear in this terminal. Press Ctrl+C to stop the app processes; Docker services remain running.
 
 To leave the browser closed, run `./start.ps1 -NoBrowser`. Logs are also written under `.run-logs/`.
+In case script fail use npm start in backend as well as frontend folder.
 
 The Vite development server forwards API, OAuth and queue dashboard requests to `http://localhost:4000`. The API is at `/health`; the authenticated queue dashboard is at `/admin/queues`.
 
@@ -21,5 +22,3 @@ ReachInbox maps its local data services to PostgreSQL `15432`, Redis `16379`, an
 - Frontend: from `frontend/`, `npm run build`, `npm test`, `npm audit --offline`.
 
 For architecture, rate-limit and delay behavior, Ethereal setup, and the assignment feature map, see [backend/README.md](backend/README.md). Never commit `backend/.env` or real credentials.
-
-For a timed walkthrough and the final private-repository/video submission checklist, see [DEMO.md](DEMO.md).
